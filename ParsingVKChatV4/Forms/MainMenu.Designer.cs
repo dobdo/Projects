@@ -34,11 +34,6 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.AuthButton = new System.Windows.Forms.Button();
             this.AllTimeGraphButton = new System.Windows.Forms.Button();
-            this.PeriodGraphButton = new System.Windows.Forms.Button();
-            this.SinceDateField = new System.Windows.Forms.DateTimePicker();
-            this.ToDateField = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.DownloadProgress = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,53 +105,6 @@
             this.AllTimeGraphButton.Visible = false;
             this.AllTimeGraphButton.Click += new System.EventHandler(this.AllTimeGraphButton_Click);
             // 
-            // PeriodGraphButton
-            // 
-            this.PeriodGraphButton.Location = new System.Drawing.Point(154, 142);
-            this.PeriodGraphButton.Name = "PeriodGraphButton";
-            this.PeriodGraphButton.Size = new System.Drawing.Size(116, 23);
-            this.PeriodGraphButton.TabIndex = 6;
-            this.PeriodGraphButton.Text = "График за даты";
-            this.PeriodGraphButton.UseVisualStyleBackColor = true;
-            this.PeriodGraphButton.Visible = false;
-            this.PeriodGraphButton.Click += new System.EventHandler(this.PeriodGraphButton_Click);
-            // 
-            // SinceDateField
-            // 
-            this.SinceDateField.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.SinceDateField.Location = new System.Drawing.Point(154, 97);
-            this.SinceDateField.Name = "SinceDateField";
-            this.SinceDateField.Size = new System.Drawing.Size(84, 20);
-            this.SinceDateField.TabIndex = 7;
-            this.SinceDateField.Visible = false;
-            // 
-            // ToDateField
-            // 
-            this.ToDateField.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ToDateField.Location = new System.Drawing.Point(154, 116);
-            this.ToDateField.Name = "ToDateField";
-            this.ToDateField.Size = new System.Drawing.Size(84, 20);
-            this.ToDateField.TabIndex = 8;
-            this.ToDateField.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Дата С:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Дата По:";
-            // 
             // DownloadProgress
             // 
             this.DownloadProgress.Location = new System.Drawing.Point(13, 305);
@@ -204,11 +152,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DownloadProgress);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ToDateField);
-            this.Controls.Add(this.SinceDateField);
-            this.Controls.Add(this.PeriodGraphButton);
             this.Controls.Add(this.AllTimeGraphButton);
             this.Controls.Add(this.AuthButton);
             this.Controls.Add(this.BackButton);
@@ -230,11 +173,6 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button AuthButton;
         private System.Windows.Forms.Button AllTimeGraphButton;
-        private System.Windows.Forms.Button PeriodGraphButton;
-        private System.Windows.Forms.DateTimePicker SinceDateField;
-        private System.Windows.Forms.DateTimePicker ToDateField;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar DownloadProgress;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
