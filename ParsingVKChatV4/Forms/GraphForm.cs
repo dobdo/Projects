@@ -28,16 +28,7 @@ namespace ParsingVKChatV4.Forms
             BildChart();
         }
 
-        public GraphForm(string ChatID,string DateSince, string DateTo)
-        {
-            Chat = ChatID;
-            InitializeComponent();
-            SetGraphData(DateSince, DateTo);
-            SetChartData(ref UserStats);
-            BildChart();
-        }
-
-
+      
         void SetChartData(ref List<string> UserStat)
         {
             List<string> AllMessages = GetMessages();
@@ -58,36 +49,6 @@ namespace ParsingVKChatV4.Forms
                     }
                 }
                 UserStat[i] += "," + Convert.ToString(Count);
-            }
-        }
-
-        void SetGraphData(string DateSince, string DateTo)
-        {
-            List<string> Result = new List<string>();
-            List<string> Dates = GetAllDate(GetMessages());
-            string Temp = null;
-           
-            int Count = 0;
-            for(int i = Dates.IndexOf(DateSince); i<Dates.Count;i++)
-            {
-            
-                    if (Dates[i].Contains(DateTo))
-                    {
-                        break;
-                    }
-                    if (string.IsNullOrEmpty(Temp))
-                    {
-                        Count = 1;
-                        Temp += Dates[i];
-                    }
-
-                    if (Temp != Dates[i])
-                    {
-                    Result.Add(Temp + "," + Convert.ToString(Count));
-                    listBox1.Items.Add(Temp + "," + Convert.ToString(Count));
-                    Temp = null;
-                    }
-                    Count++;
             }
         }
 
@@ -142,18 +103,9 @@ namespace ParsingVKChatV4.Forms
             return Temp;
         }
 
-        List<string> GetAllDate(List<string> Messages)
+        private void GraphForm_Load(object sender, EventArgs e)
         {
-            List<string> Temp = new List<string>();
-            foreach(var Date in Messages)
-            {
-                if(Date.Contains("DATE:"))
-                {
-                    Temp.Add(Date.Trim('D','A','T','E',':'));
-                }
-            }
-            return Temp;
-        }
 
+        }
     }
 }
