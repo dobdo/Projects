@@ -190,12 +190,8 @@ namespace ParsingVKChatV4.Forms
             DrawGraphButton.Visible = false;
             BackButton.Visible = false;
             AllTimeGraphButton.Visible = false;
-            PeriodGraphButton.Visible = false;
-            ToDateField.Visible = false;
-            SinceDateField.Visible = false;
-            label1.Visible = false;
-            label2.Visible = false;
             label3.Visible = false;
+            label4.Visible = false;
             DownloadProgress.Visible = false;
         }
         void MainMenuButtonSet()
@@ -206,12 +202,8 @@ namespace ParsingVKChatV4.Forms
             DrawGraphButton.Visible = true;
             BackButton.Visible = false;
             AllTimeGraphButton.Visible = false;
-            PeriodGraphButton.Visible = false;
-            ToDateField.Visible = false;
-            SinceDateField.Visible = false;
-            label1.Visible = false;
-            label2.Visible = false;
             label3.Visible = false;
+            label4.Visible = true;
             DownloadProgress.Visible = true;
         }
         void GraphMenuSet()
@@ -221,23 +213,15 @@ namespace ParsingVKChatV4.Forms
             DownloadButton.Visible = false;
             DrawGraphButton.Visible = false;
             BackButton.Visible = true;
-            AllTimeGraphButton.Visible = true;
-            PeriodGraphButton.Visible = true;
-            ToDateField.Visible = true;
-            SinceDateField.Visible = true;
-            label1.Visible = true;
-            label2.Visible = true;
+            AllTimeGraphButton.Visible = true;          
             label3.Visible = false;
             DownloadProgress.Visible = false;
+            label4.Visible = false;
         }
 
 
 
 
-        private void PeriodGraphButton_Click(object sender, EventArgs e)
-        {
-            GraphForm Graph = new GraphForm(ChatIDField.Text, SinceDateField.Text, ToDateField.Text);
-            Graph.Show();
-        }
+     
     }
 }
